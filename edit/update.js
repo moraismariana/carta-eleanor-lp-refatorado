@@ -297,7 +297,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         alert("Todas as atualizações foram realizadas com sucesso!");
-        window.location.href = "/";
+        window.location.href =
+          "https://moraismariana.github.io/carta-eleanor-lp-refatorado/";
       } catch (error) {
         console.error("Erro ao atualizar os dados:", error);
         alert("Você não tem permissão para atualizar os dados.");
