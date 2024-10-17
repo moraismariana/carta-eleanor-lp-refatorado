@@ -1,0 +1,54 @@
+#cta {
+  background-image: url("../../img/cta/cta-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: $w;
+  text-align: center;
+  @include mbottom-1;
+  & > div {
+    @include container;
+    padding-top: (2 * $spacing-1);
+    padding-bottom: (2 * $spacing-1);
+    p {
+      @include text-1;
+      @include mbottom-3;
+    }
+    a {
+      @include title-2;
+      font-size: px-rem(28px);
+      border: 2px solid $w;
+      border-radius: 50px;
+      padding: 0.7rem 2rem;
+      display: block;
+      max-width: fit-content;
+      @include align-div;
+      @include screen(notebook-s) {
+        font-size: px-rem(20px);
+      }
+    }
+    @include screen(notebook-s) {
+      padding-top: (1.5 * $spacing-1);
+      padding-bottom: (1.5 * $spacing-1);
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  p {
+    @include container;
+    color: $b2;
+    text-align: center;
+    @include text-2;
+    font-size: px-rem(16px);
+    padding-top: $spacing-3;
+    padding-bottom: $spacing-3;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #e6e6e6;
+    position: absolute;
+  }
+}

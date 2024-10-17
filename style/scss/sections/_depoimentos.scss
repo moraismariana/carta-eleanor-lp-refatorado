@@ -1,0 +1,73 @@
+#depoimentos {
+  // @include container;
+  @include mbottom-1;
+  margin-bottom: $spacing-1 - px-rem(20px);
+  text-align: center;
+  h2 {
+    @include title-2;
+    @include mbottom-2;
+    margin-bottom: $spacing-2;
+  }
+  p {
+    @include text-2;
+    max-width: 70ch;
+    @include align-div;
+    &:nth-of-type(1) {
+      @include mbottom-3;
+      padding-top: $spacing-3 + px-rem(8px);
+    }
+    &:nth-of-type(2) {
+      font-family: "Teachers";
+      font-size: px-rem(24px);
+      font-weight: 500;
+    }
+  }
+}
+
+#depoimentos .leitor {
+  background-color: $w;
+  @include box-shadow;
+  border-radius: 10px;
+  position: relative;
+  padding: $spacing-2;
+  margin-top: 52px;
+  margin-bottom: 20px;
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50px;
+    @include border;
+    @include box-shadow;
+    top: -48px;
+  }
+  @include screen(mobile) {
+    padding: $spacing-2 - px-rem(10px);
+  }
+}
+
+.splide__arrow--prev {
+  left: calc(18.75% - 12px);
+  @include screen(notebook-s) {
+    left: calc(10% - 12px);
+  }
+}
+
+.splide__arrow--next {
+  right: calc(18.75% - 12px);
+  @include screen(notebook-s) {
+    right: calc(10% - 12px);
+  }
+}
+
+.splide__arrow {
+  top: calc(50% + 12px);
+  transition: 0.3s;
+  &[disabled] {
+    opacity: 0;
+    cursor: auto;
+  }
+}

@@ -1,0 +1,19 @@
+// Reset / definições iniciais
+@import "colors";
+@import "functions";
+@import "mixins";
+@import "global";
+@import "typo";
+
+// Sections
+@import "sections/inicio";
+@import "sections/historia";
+@import "sections/depoimentos";
+@import "sections/autor";
+@import "sections/cta";
+
+// Tela de Login
+@import "login/login";
+
+// Tela de Edit
+@import "edit/edit";

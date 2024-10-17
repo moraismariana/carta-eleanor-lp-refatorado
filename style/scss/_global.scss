@@ -1,0 +1,50 @@
+html {
+  scroll-behavior: smooth;
+}
+:target {
+  scroll-margin-top: 7rem;
+}
+
+body {
+  margin: 0px;
+  font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+  background-color: $w2;
+}
+
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* container */
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 0 20px;
+  @include screen(notebook-m) {
+    padding: 0 60px;
+  }
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,111 @@
+.admin-login-header {
+  @include container;
+  max-width: fit-content;
+  @include align-div;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  svg {
+    max-width: 64px;
+    @include screen(notebook-m) {
+      max-width: 60px;
+    }
+    @include screen(tablet) {
+      max-width: 52px;
+    }
+  }
+}
+
+#admin-login {
+  @include container;
+  //   120px para ficar logo abaixo
+  height: calc(100vh - 155px);
+
+  h2 {
+    font-family: "Urbanist", Arial, Helvetica, sans-serif;
+    font-size: px-rem(32px);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 32px;
+    @include screen(mobile) {
+      font-size: px-rem(28px);
+    }
+  }
+  label {
+    display: block;
+    font-family: "Urbanist", Arial, Helvetica, sans-serif;
+    font-size: px-rem(20px);
+    font-weight: 500;
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+  input {
+    background-color: #f8f8f8;
+    border: 2px solid #dadada;
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: 220px;
+    outline: none;
+    &#username {
+      margin-bottom: 20px;
+    }
+    &:focus {
+      border: 2px solid #373737;
+    }
+    @include responsive(392px) {
+      width: 50vw;
+    }
+  }
+  button {
+    display: block;
+    font-family: "Urbanist", Arial, Helvetica, sans-serif;
+    font-size: px-rem(20px);
+    font-weight: 500;
+    background-color: #373737;
+    border: none;
+    color: $w;
+    border-radius: 50px;
+    padding: 0.4em 1em;
+    cursor: pointer;
+    @include align-div;
+  }
+  .admin-login-content {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+  }
+}
+
+#admin-login-form {
+  & > div {
+    background-color: #f8f8f8;
+    border-radius: 20px;
+    max-width: fit-content;
+    padding: 40px;
+    @include align-div;
+    margin-bottom: 32px;
+    box-shadow: 0px 4px 6px rgba(30, 30, 30, 0.1);
+    @include responsive(392px) {
+      padding: 32px;
+    }
+  }
+}
+
+.admin-login-footer {
+  position: relative;
+  p {
+    font-family: "Urbanist", Arial, Helvetica, sans-serif;
+    @include container;
+    color: $b2;
+    text-align: center;
+    font-size: px-rem(16px);
+    padding-top: $spacing-3;
+    padding-bottom: $spacing-3;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #e6e6e6;
+    position: absolute;
+  }
+}

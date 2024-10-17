@@ -1,0 +1,82 @@
+#inicio {
+  height: 95vh;
+  position: relative;
+  .img {
+    position: absolute;
+    top: $spacing-1;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 120px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    @include border;
+    @include box-shadow;
+    @include screen(notebook-m) {
+      top: $spacing-1 - px-rem(42px);
+    }
+    @include screen(notebook-s) {
+      width: 92px;
+      height: 92px;
+    }
+  }
+  div {
+    @include container;
+    position: relative;
+    top: 52%;
+    transform: translateY(-50%);
+    @include align-div;
+    max-width: fit-content;
+    text-align: center;
+    h1 {
+      @include title-1;
+      @include mbottom-3;
+      @include screen(mobile) {
+        max-width: 12ch;
+        @include align-div;
+      }
+    }
+    h2 {
+      @include title-2;
+      @include mbottom-3;
+      font-weight: 400;
+    }
+    p {
+      @include text-1;
+      max-width: 40ch;
+      @include align-div;
+      color: $b2;
+      @include screen(mobile) {
+        max-width: 30ch;
+        @include align-div;
+      }
+    }
+  }
+  .pseudoimg-span {
+    content: "";
+    position: absolute;
+    height: ($spacing-1 + px-rem((120px + 16px)/2));
+    width: 100%;
+    background-image: url("../../img/inicio/inicio-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    @include screen(notebook-m) {
+      height: ($spacing-1 + px-rem((120px + 16px)/2) - px-rem(42px));
+    }
+    @include screen(notebook-s) {
+      height: ($spacing-1 + px-rem((92px + 12px)/2) - px-rem(42px));
+    }
+  }
+  &::after {
+    content: url("../../img/inicio/seta.svg");
+    position: absolute;
+    bottom: $spacing-2;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.dynamic-background::before {
+  background-image: url("");
+}

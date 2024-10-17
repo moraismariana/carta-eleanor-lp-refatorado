@@ -1,0 +1,35 @@
+@mixin title-1 {
+  font-family: "Teachers";
+  font-size: px-rem(42px);
+  font-weight: 500;
+  @include screen(notebook-s) {
+    font-size: px-rem(36px);
+  }
+}
+
+@mixin title-2 {
+  font-family: "Teachers";
+  font-size: px-rem(38px);
+  font-weight: 500;
+  @include screen(notebook-s) {
+    font-size: px-rem(30px);
+  }
+}
+
+@mixin text-1 {
+  font-family: "Hanken Grotesk";
+  font-size: px-rem(24px);
+  font-weight: 300;
+  @include screen(notebook-s) {
+    font-size: px-rem(20px);
+  }
+}
+
+@mixin text-2 {
+  font-family: "Hanken Grotesk";
+  font-size: px-rem(20px);
+  font-weight: 300;
+  @include screen(notebook-s) {
+    font-size: px-rem(18px);
+  }
+}

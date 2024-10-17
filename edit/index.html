@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Última Carta de Eleanor | Gabriel Liddel | Lançamento do Livro</title>
+    <meta name="description" content="Novo livro: A Última Carta de Eleanor. Uma história de amor, mistério e redenção ambientada na Londres de 1920.">
+
+    <link rel="stylesheet" href="../style/css/style.css">
+
+    <link rel="shortcut icon" href="../img/favicon/favicon.svg" type="image/svg+xml">
+
+    <!-- tipografias -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+</head>
+
+<body id="edit-page">
+    <form id="update-form">
+        <section id="edit-header">
+            <div>
+                <p>Você está no modo de edição.</p>
+                <button id="salvar" type="submit">Salvar página</button>
+            </div>
+        </section>
+
+        <article class="pseudoimg" id="inicio">
+            <span class="pseudoimg-span"></span>
+            <input type="file" class="pseudoimg-input" accept="image/png, image/jpeg, image/webp" style="display: none;">
+            <img class="img" src="../img/inicio/gabriel-liddel.jpg" alt="Gabriel Liddel" data-width="1200" data-height="1200">
+            <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+            <div>
+                <textarea class="text-input" id="text1" rows="1"></textarea>
+                <textarea class="text-input" id="text2" rows="1"></textarea>
+                <textarea class="text-input" id="text3"></textarea>
+            </div>
+        </article>
+
+        <section class="bg" id="historia">
+            <div>
+                <h2><textarea class="text-input" id="text4" rows="1"></textarea></h2>
+                <textarea class="text-input" id="text5" rows="4"></textarea>
+            </div>
+            <input type="file" class="bg-input" accept="image/png, image/jpeg, image/webp" style="display: none;">
+        </section>
+
+        <section id="depoimentos" class="depoimentos-edit">
+            <h2><textarea class="text-input" id="text6" rows="1"></textarea></h2>
+            <div class="leitores-flex">
+                <div class="leitor">
+                    <img class="img" src="../img/depoimentos/depoimentos-1.jpg" alt="Leitor" data-width="1000" data-height="1000">
+                    <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                    <p><textarea class="text-input" id="text7"></textarea></p>
+                    <p><textarea class="text-input" id="text8" rows="1"></textarea></p>
+                </div>
+                <div class="leitor">
+                    <img class="img" src="../img/depoimentos/depoimentos-1.jpg" alt="Leitor" data-width="1000" data-height="1000">
+                    <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                    <p><textarea class="text-input" id="text9"></textarea></p>
+                    <p><textarea class="text-input" id="text10" rows="1"></textarea></p>
+                </div>
+                <div class="leitor">
+                    <img class="img" src="../img/depoimentos/depoimentos-1.jpg" alt="Leitor" data-width="1000" data-height="1000">
+                    <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                    <p><textarea class="text-input" id="text11"></textarea></p>
+                    <p><textarea class="text-input" id="text12" rows="1"></textarea></p>
+                </div>
+                <div class="leitor">
+                    <img class="img" src="../img/depoimentos/depoimentos-1.jpg" alt="Leitor" data-width="1000" data-height="1000">
+                    <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                    <p><textarea class="text-input" id="text13"></textarea></p>
+                    <p><textarea class="text-input" id="text14" rows="1"></textarea></p>
+                </div>
+                <div class="leitor">
+                    <img class="img" src="../img/depoimentos/depoimentos-1.jpg" alt="Leitor" data-width="1000" data-height="1000">
+                    <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                    <p><textarea class="text-input" id="text15"></textarea></p>
+                    <p><textarea class="text-input" id="text16" rows="1"></textarea></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="autor">
+            <h2><textarea class="text-input" id="text17" rows="1"></textarea></h2>
+            <div class="autor-grid">
+                <div class="autor-imagens">
+                    <img class="img" src="../img/autor/autor-2.jpg" alt="Montanhas" data-width="964" data-height="1314">
+                    <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                    <img class="img" src="../img/autor/autor-1.jpg" alt="Gabriel Liddel fazendo trilha" data-width="1108" data-height="936">
+                    <input class="img-input" type="file" accept="image/png, image/jpeg, image/webp" style="display: none;">
+                </div>
+                <p><textarea class="text-input" id="text18" rows="6"></textarea></p>
+            </div>
+        </section>
+
+        <section class="bg" id="cta">
+            <div>
+                <p><textarea class="text-input" id="text19" rows="1"></textarea></p>
+                <textarea class="text-input" id="text20" rows="1"></textarea>
+            </div>
+            <input type="file" class="bg-input" accept="image/png, image/jpeg, image/webp" style="display: none;">
+        </section>
+
+        <footer class="footer">
+            <p>Desenvolvido por Mariana Morais © 2024.</p>
+        </footer>
+
+    </form>
+
+    <script src="./update.js"></script>
+
+</body>
+
+</html>
