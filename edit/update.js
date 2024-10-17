@@ -4,16 +4,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (!token) {
     alert("Você precisa estar autenticado para editar.");
-    window.location.href = "http://127.0.0.1:5500/login/";
+    window.location.href =
+      "https://moraismariana.github.io/carta-eleanor-lp-refatorado/login/";
     return;
   }
 
   // URLs das APIs
   const urls = [
-    "http://127.0.0.1:8000/indextext/1",
-    "http://127.0.0.1:8000/indeximage/1",
-    "http://127.0.0.1:8000/indexbg/1",
-    "http://127.0.0.1:8000/indexpseudoimage/1",
+    "https://projeto-1-c5b0af5ed27e.herokuapp.com/indextext/1",
+    "https://projeto-1-c5b0af5ed27e.herokuapp.com/indeximage/1",
+    "https://projeto-1-c5b0af5ed27e.herokuapp.com/indexbg/1",
+    "https://projeto-1-c5b0af5ed27e.herokuapp.com/indexpseudoimage/1",
   ];
 
   try {
@@ -35,7 +36,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!allValid) {
       alert("Você não tem permissão para acessar todas as áreas.");
       localStorage.removeItem("accessToken");
-      window.location.href = "http://127.0.0.1:5500/login/";
+      window.location.href =
+        "https://moraismariana.github.io/carta-eleanor-lp-refatorado/login/";
       return;
     }
 
@@ -44,15 +46,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Erro ao verificar autenticação:", error);
     alert("Erro ao verificar sua sessão. Por favor, faça login novamente.");
     localStorage.removeItem("accessToken");
-    window.location.href = "http://127.0.0.1:5500/login/";
+    window.location.href =
+      "https://moraismariana.github.io/carta-eleanor-lp-refatorado/login/";
   }
 
   // PREENCHER OS DADOS DA API
 
-  const textAPIUrl = "http://127.0.0.1:8000/indextext/1/";
-  const imageAPIUrl = "http://127.0.0.1:8000/indeximage/1/";
-  const bgAPIUrl = "http://127.0.0.1:8000/indexbg/1/";
-  const pseudoimageAPIUrl = "http://127.0.0.1:8000/indexpseudoimage/1/";
+  const textAPIUrl =
+    "https://projeto-1-c5b0af5ed27e.herokuapp.com/indextext/1/";
+  const imageAPIUrl =
+    "https://projeto-1-c5b0af5ed27e.herokuapp.com/indeximage/1/";
+  const bgAPIUrl = "https://projeto-1-c5b0af5ed27e.herokuapp.com/indexbg/1/";
+  const pseudoimageAPIUrl =
+    "https://projeto-1-c5b0af5ed27e.herokuapp.com/indexpseudoimage/1/";
 
   const [textResponse, imageResponse, bgResponse, pseudoimageResponse] =
     await Promise.all([

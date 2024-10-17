@@ -42,10 +42,18 @@ new Splide(".splide", splideOptions).mount();
 // Dados da API
 
 Promise.all([
-  fetch("http://127.0.0.1:8000/indextext/1").then((res) => res.json()),
-  fetch("http://127.0.0.1:8000/indeximage/1").then((res) => res.json()),
-  fetch("http://127.0.0.1:8000/indexbg/1").then((res) => res.json()),
-  fetch("http://127.0.0.1:8000/indexpseudoimage/1").then((res) => res.json()),
+  fetch("https://projeto-1-c5b0af5ed27e.herokuapp.com/indextext/1").then(
+    (res) => res.json()
+  ),
+  fetch("https://projeto-1-c5b0af5ed27e.herokuapp.com/indeximage/1").then(
+    (res) => res.json()
+  ),
+  fetch("https://projeto-1-c5b0af5ed27e.herokuapp.com/indexbg/1").then((res) =>
+    res.json()
+  ),
+  fetch("https://projeto-1-c5b0af5ed27e.herokuapp.com/indexpseudoimage/1").then(
+    (res) => res.json()
+  ),
 ]).then(([textos, imagens, backgrounds, pseudoimagens]) => {
   document.getElementById("index-content").classList.add("visible");
 

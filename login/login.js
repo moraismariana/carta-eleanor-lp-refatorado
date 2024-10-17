@@ -7,16 +7,19 @@ document
     const password = document.getElementById("password").value;
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/token/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: username,
-          password: password,
-        }),
-      });
+      const response = await fetch(
+        "https://projeto-1-c5b0af5ed27e.herokuapp.com/api/token/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: username,
+            password: password,
+          }),
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -25,7 +28,8 @@ document
         localStorage.setItem("refreshToken", data.refresh);
 
         // Redirecionar para a página de edição
-        window.location.href = "http://127.0.0.1:5500/edit/";
+        window.location.href =
+          "https://moraismariana.github.io/carta-eleanor-lp-refatorado/edit/";
       } else {
         alert("Erro ao fazer login. Verifique suas credenciais.");
       }
