@@ -47,6 +47,8 @@ Promise.all([
   fetch("http://127.0.0.1:8000/indexbg/1").then((res) => res.json()),
   fetch("http://127.0.0.1:8000/indexpseudoimage/1").then((res) => res.json()),
 ]).then(([textos, imagens, backgrounds, pseudoimagens]) => {
+  document.getElementById("index-content").classList.add("visible");
+
   // TEXTOS
   let textAPI = Object.values(textos);
   textAPI.shift();
@@ -75,7 +77,6 @@ Promise.all([
   let pseudoimgAPI = Object.values(pseudoimagens);
   pseudoimgAPI.shift();
   let pseudoimgHTML = document.getElementsByClassName("pseudoimg-span");
-  let styleSheet = document.styleSheets[0];
   for (let i = 0; i < pseudoimgHTML.length; i++) {
     pseudoimgHTML[i].style.backgroundImage = `url(${pseudoimgAPI[i]})`;
   }

@@ -11,6 +11,15 @@ body {
   background-color: $w2;
 }
 
+#index-content {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.visible {
+  opacity: 1 !important;
+}
+
 h1,
 h2,
 h3,
